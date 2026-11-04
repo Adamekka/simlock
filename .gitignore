@@ -1,0 +1,16 @@
+# Generated credentials and local daemon identity.
+*.token
+agent-device-profile.json
+instance.json
+
+# Runtime databases, logs, sockets and process records.
+*.db
+*.db-*
+*.log
+*.log.*
+*.sock
+adb-server.json
+logs/
+
+# Simulator and emulator data.
+devices/

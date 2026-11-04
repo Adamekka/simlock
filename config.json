@@ -1,0 +1,169 @@
+{
+  "lease": {
+    "defaultTtlMs": 900000,
+    "maxTtlMs": 14400000,
+    "maxPerRequester": 3,
+    "identity": {
+      "ios": "reusable",
+      "android": "reusable"
+    },
+    "requestRetentionMs": 600000,
+    "maxRequestRecords": 10000,
+    "endWaitMs": 600000
+  },
+  "drivers": {
+    "ios": {
+      "deviceSet": "simlock"
+    },
+    "android": {
+      "adbServerPort": 5038
+    }
+  },
+  "capacity": {
+    "strategy": "resource",
+    "config": {
+      "limits": {
+        "maxRunning": 12,
+        "ios": {
+          "maxDevices": 9,
+          "maxRunning": 9
+        },
+        "android": {
+          "maxDevices": 3,
+          "maxRunning": 3
+        }
+      },
+      "ramBudget": {
+        "iosBytesPerDevice": 1610612736,
+        "androidBytesPerDevice": 4294967296,
+        "iosSlimBytesPerDevice": 1610612736,
+        "androidSlimBytesPerDevice": 4294967296
+      }
+    }
+  },
+  "warmPool": {
+    "enabled": true,
+    "learn": true,
+    "reserveRunning": {
+      "ios": 0,
+      "android": 0
+    },
+    "maxConcurrentBoots": 4,
+    "targets": [],
+    "quarantine": {
+      "maxRetries": 3,
+      "retryBackoffMs": 30000,
+      "retryBackoffMultiplier": 2,
+      "maxRetryBackoffMs": 300000
+    }
+  },
+  "idle": {
+    "shutdownAfterMs": 600000,
+    "deleteAfterMs": 3600000
+  },
+  "diskPressure": {
+    "freeBytesThreshold": 10737418240
+  },
+  "health": {
+    "enabled": true,
+    "probeIntervalMs": 30000,
+    "stableObservations": 2,
+    "maxRecoveryAttempts": 3,
+    "recoveryBackoffMs": 5000,
+    "maxConcurrentRecoveries": 1
+  },
+  "stalledTransition": {
+    "thresholdMultiplier": 3,
+    "minimumThresholdMs": 60000
+  },
+  "update": {
+    "check": true
+  },
+  "downloads": {
+    "policy": "on-request",
+    "acceptAndroidLicenses": true,
+    "timeoutMs": 1200000
+  },
+  "ios": {
+    "defaultMode": "full",
+    "defaultModels": {},
+    "slim": {
+      "bootTimeoutMs": 600000,
+      "categories": [
+        "widgets",
+        "siri",
+        "search",
+        "icloud",
+        "store",
+        "pim",
+        "web",
+        "family",
+        "health",
+        "photos",
+        "apps",
+        "messaging",
+        "connectivity",
+        "telemetry",
+        "other"
+      ]
+    }
+  },
+  "android": {
+    "defaultModels": {},
+    "emulator": {
+      "headless": false,
+      "gpu": "auto",
+      "audio": true,
+      "bootAnimation": false
+    }
+  },
+  "exec": {
+    "timeoutMs": 600000
+  },
+  "http": {
+    "enabled": true,
+    "host": "127.0.0.1",
+    "port": 4701
+  },
+  "gateway": {
+    "disconnectedRetentionMs": 86400000,
+    "execTimeoutMs": 660000,
+    "leaseRequestTimeoutMs": 300000,
+    "routing": "warm-then-free",
+    "alerts": {
+      "destinations": []
+    }
+  },
+  "capabilities": {
+    "agent-device": {
+      "enabled": true,
+      "command": "agent-device"
+    },
+    "input": {
+      "enabled": true
+    },
+    "stream": {
+      "enabled": false,
+      "bitrateKbps": 1500,
+      "fps": 30,
+      "maxDimension": 720
+    },
+    "tunnel": {
+      "enabled": false
+    }
+  },
+  "log": {
+    "level": "info",
+    "rotateBytes": 5242880
+  },
+  "eventBuffer": {
+    "capacity": 1000
+  },
+  "eventLog": {
+    "retention": 604800000,
+    "maxBytes": 268435456
+  },
+  "metrics": {
+    "retention": 7776000000
+  }
+}
