@@ -85,25 +85,11 @@
     "timeoutMs": 1200000
   },
   "ios": {
-    "defaultMode": "full",
+    "defaultMode": "slim",
     "defaultModels": {},
     "slim": {
       "bootTimeoutMs": 600000,
       "categories": [
-        "widgets",
-        "siri",
-        "search",
-        "icloud",
-        "store",
-        "pim",
-        "web",
-        "family",
-        "health",
-        "photos",
-        "apps",
-        "messaging",
-        "connectivity",
-        "telemetry",
         "other"
       ]
     }
