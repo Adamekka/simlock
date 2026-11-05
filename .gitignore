@@ -10,6 +10,10 @@ instance.json
 *.log.*
 *.sock
 adb-server.json
+agent-device-daemon.json
+agent-device-phones-daemon.json
+agent-device/
+agent-device-phones/
 logs/
 
 # Simulator and emulator data.
