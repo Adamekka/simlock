@@ -129,7 +129,7 @@
       "enabled": true
     },
     "stream": {
-      "enabled": false,
+      "enabled": true,
       "bitrateKbps": 1500,
       "fps": 30,
       "maxDimension": 720
